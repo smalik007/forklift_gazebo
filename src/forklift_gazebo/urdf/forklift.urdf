@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<robot name="fork_lift_shift">
+  <joint name="fork_lift_shift__lift" type="prismatic">
+    <parent link="fork_lift_shift__base_fork_link"/>
+    <child link="fork_lift_shift__fork_link"/>
+    <origin rpy="0 0 0" xyz="0.25 -0.01  0.23"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="-1.0" lower="-0.1" upper="0.1" velocity="-1.0"/>
+  </joint>
+  <joint name="fork_lift_shift__shift" type="prismatic">
+    <parent link="fork_lift_shift__fixed_box"/>
+    <child link="fork_lift_shift__base_fork_link"/>
+    <origin rpy="0 0 0" xyz="0.08 0.01 0.04"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="-1.0" lower="-1.79769e+308" upper="1.79769e+308" velocity="-1.0"/>
+  </joint>
+  <link name="fork_lift_shift__fixed_box">
+    <inertial>
+      <mass value="20"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="fork_lift_shift__collision">
+      <origin rpy="0 0 0" xyz="-0.01799  0       0"/>
+      <geometry>
+        <box size="0.2 0.2 0.3"/>
+      </geometry>
+    </collision>
+    <visual name="fork_lift_shift__visual">
+      <origin rpy="0 0 0" xyz="-0.01799  0       0"/>
+      <geometry>
+        <box size="0.2 0.2 0.3"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="fork_lift_shift__base_fork_link">
+    <inertial>
+      <mass value="10"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="fork_lift_shift__collision">
+      <origin rpy="0 0 0" xyz="-0.08 -0.01 -0.12"/>
+      <geometry>
+        <mesh filename="package://forklift_gazebo/stl/base.STL" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="fork_lift_shift__visual">
+      <origin rpy="0 0 0" xyz="-0.08 -0.01 -0.12"/>
+      <geometry>
+        <mesh filename="package://forklift_gazebo/stl/base.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+  <link name="fork_lift_shift__fork_link">
+    <inertial>
+      <mass value="5"/>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <inertia ixx="0.166667" ixy="0" ixz="0" iyy="0.166667" iyz="0" izz="0.166667"/>
+    </inertial>
+    <collision name="fork_lift_shift__collision">
+      <origin rpy="0 0 0" xyz="-0.33  0   -0.27"/>
+      <geometry>
+        <mesh filename="package://forklift_gazebo/stl/fork.STL" scale="1.0 1.0 1.0"/>
+      </geometry>
+    </collision>
+    <visual name="fork_lift_shift__visual">
+      <origin rpy="0 0 0" xyz="-0.33  0   -0.27"/>
+      <geometry>
+        <mesh filename="package://forklift_gazebo/stl/fork.STL" scale="1 1 1"/>
+      </geometry>
+    </visual>
+  </link>
+</robot>

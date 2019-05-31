@@ -49,14 +49,7 @@ public:
 		/* Add Bots */
 		ROS_INFO("Total bots: %d", NUM_BOTS);
 
-		
-			addModel("model://fork_lift_shift",
-					"forklift" , 0.0, 0.0, 0.0);
-
-
-		/* Add Racks */
-
-		//addModel("model://MSU", "MSU", 1.65, 0, 0);
+		addModel("model://fork_lift_shift", "forklift" , 0.0, 0.0, 0.0);
 	}
 
 };

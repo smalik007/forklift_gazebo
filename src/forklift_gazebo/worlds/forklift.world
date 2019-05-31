@@ -9,7 +9,10 @@
       <uri>model://sun</uri>
     </include>
 
-  <plugin name="ForkLiftWorld" filename="libForkLiftWorld.so"/>
+  <!--plugin name="ForkLiftWorld" filename="libForkLiftWorld.so"/-->
+  <include>
+      <uri>model://forklift</uri>
+  </include>
     
   </world>
 </sdf>

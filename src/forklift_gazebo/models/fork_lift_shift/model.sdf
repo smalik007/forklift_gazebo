@@ -4,9 +4,9 @@
     <pose frame=''>0.0 0.0 0.0 0.0 0.0 0.0</pose>
     <plugin name="ForkLiftPlugin" filename="libForkLiftPlugin.so"/>
     <link name='fixed_box'>
-      <pose frame=''>-0.018 0.0 0.0 0 -0 0</pose>
+      <pose frame=''>-0.02 0.0 0.0 0 -0 0</pose>
       <inertial>
-        <mass>20</mass>
+        <mass>50</mass>
         <inertia>
           <ixx>0.166667</ixx>
           <ixy>0</ixy>
@@ -102,9 +102,9 @@
     </link>
     <model name='base_fork'>
       <link name='base_fork_link'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose frame=''>0 0 -0.08 0 -0 0</pose>
         <inertial>
-          <mass>10</mass>
+          <mass>25</mass>
           <inertia>
             <ixx>0.166667</ixx>
             <ixy>0</ixy>
@@ -118,7 +118,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/suhail/ROS/youbot_forklift/src/forklift/youbot_forklift_description/meshes/youbot_forklift/base.STL</uri>
+              <uri>/home/suhail/ROS/forklift_robot/src/forklift_gazebo/stl/base.STL</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -142,7 +142,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/suhail/ROS/youbot_forklift/src/forklift/youbot_forklift_description/meshes/youbot_forklift/base.STL</uri>
+              <uri>/home/suhail/ROS/forklift_robot/src/forklift_gazebo/stl/base.STL</uri>
             </mesh>
           </geometry>
           <surface>
@@ -200,7 +200,7 @@
       <link name='fork_link'>
         <pose frame=''>0 0 0 0 -0 0</pose>
         <inertial>
-          <mass>5</mass>
+          <mass>10</mass>
           <inertia>
             <ixx>0.166667</ixx>
             <ixy>0</ixy>
@@ -214,7 +214,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/suhail/ROS/youbot_forklift/src/forklift/youbot_forklift_description/meshes/youbot_forklift/fork.STL</uri>
+              <uri>/home/suhail/ROS/forklift_robot/src/forklift_gazebo/stl/fork.STL</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -238,7 +238,7 @@
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/suhail/ROS/youbot_forklift/src/forklift/youbot_forklift_description/meshes/youbot_forklift/fork.STL</uri>
+              <uri>/home/suhail/ROS/forklift_robot/src/forklift_gazebo/stl/fork.STL</uri>
             </mesh>
           </geometry>
           <surface>
@@ -300,8 +300,10 @@
         <xyz>0 0 1</xyz>
         <use_parent_model_frame>0</use_parent_model_frame>
         <limit>
-          <lower>-1.79769e+308</lower>
-          <upper>1.79769e+308</upper>
+          <!--lower>-1.79769e+308</lower-->
+          <!--upper>1.79769e+308</upper-->
+          <lower>-0.1</lower>
+          <upper>0.1</upper>
           <effort>-1</effort>
           <velocity>-1</velocity>
         </limit>
@@ -333,8 +335,8 @@
         <xyz>0 1 0</xyz>
         <use_parent_model_frame>0</use_parent_model_frame>
         <limit>
-          <lower>-1.79769e+308</lower>
-          <upper>1.79769e+308</upper>
+          <lower>-0.05</lower>
+          <upper>0.05</upper>
           <effort>-1</effort>
           <velocity>-1</velocity>
         </limit>
