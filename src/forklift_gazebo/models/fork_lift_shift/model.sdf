@@ -335,8 +335,8 @@
         <xyz>0 1 0</xyz>
         <use_parent_model_frame>0</use_parent_model_frame>
         <limit>
-          <lower>-0.05</lower>
-          <upper>0.05</upper>
+          <lower>-0.1</lower>
+          <upper>0.1</upper>
           <effort>-1</effort>
           <velocity>-1</velocity>
         </limit>
