@@ -198,7 +198,7 @@
     </model>
     <model name='fork'>
       <link name='fork_link'>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+        <pose frame=''>0.005 0 -0.2 0 -0 0</pose>
         <inertial>
           <mass>10</mass>
           <inertia>
@@ -210,6 +210,7 @@
             <izz>0.166667</izz>
           </inertia>
         </inertial>
+        <gravity>0</gravity>
         <visual name='visual'>
           <pose frame=''>0 0 0 0 -0 0</pose>
           <geometry>
@@ -229,7 +230,7 @@
             <specular>0.01 0.01 0.01 1</specular>
             <emissive>0 0 0 1</emissive>
           </material>
-          <cast_shadows>1</cast_shadows>
+          <cast_shadows>0</cast_shadows>
           <transparency>0</transparency>
         </visual>
         <collision name='collision'>
@@ -295,15 +296,15 @@
     <joint name='lift' type='prismatic'>
       <parent>base_fork::base_fork_link</parent>
       <child>fork::fork_link</child>
-      <pose frame=''>0.33 0 0.27 0 -0 0</pose>
+      <pose frame=''>0.34 0 0.25 0 -0 0</pose>
       <axis>
         <xyz>0 0 1</xyz>
         <use_parent_model_frame>0</use_parent_model_frame>
         <limit>
           <!--lower>-1.79769e+308</lower-->
           <!--upper>1.79769e+308</upper-->
-          <lower>-0.1</lower>
-          <upper>0.1</upper>
+          <lower>0</lower>
+          <upper>0.25</upper>
           <effort>-1</effort>
           <velocity>-1</velocity>
         </limit>
