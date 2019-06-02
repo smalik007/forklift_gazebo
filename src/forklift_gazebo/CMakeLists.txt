@@ -230,3 +230,13 @@ add_library(ForkLiftWorld SHARED plugins/fork_lift_world.cc)
 target_link_libraries(ForkLiftWorld
   ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES}
 )
+
+add_library(ForkLiftFreeBodyPlugin SHARED plugins/forklift_freebody.cc)
+target_link_libraries(ForkLiftFreeBodyPlugin
+  ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES}
+)
+
+add_library(ForkLiftFreeBodyWorld SHARED plugins/fork_lift_freebody_world.cc)
+target_link_libraries(ForkLiftFreeBodyWorld
+  ${GAZEBO_LIBRARIES} ${catkin_LIBRARIES}
+)
